@@ -1,0 +1,21 @@
+
+  
+  .navbar {
+    margin: 2px;
+
+  }
+   .navbar a{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px;
+    
+  }
+    
+.logo-container {
+  width: 200px; 
+  height: 200px;
+  background-image: url("../../assets/jbResto.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
