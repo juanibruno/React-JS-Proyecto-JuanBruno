@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 
-export const Clicker = () => {
+const Clicker = () => {
     let [contador, setContador] = useState (0)
 
     
@@ -12,10 +12,12 @@ export const Clicker = () => {
 
     return (
 <div>
-    <button onClick={incrementar}>Clikeame</button>
+    <button onClick={incrementar}>Click me</button>
     <hr />
     <p>Clicks:{contador}</p>
 </div>
 
     )
 }
+
+export default Clicker

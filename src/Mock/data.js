@@ -1,0 +1,77 @@
+
+
+
+export const OpcionesMenu = [
+    {
+        id: 1,
+        category: "carnes",
+        nombre: "Asado de Tira",
+        description: "Jugoso y tierno asado de tira cocido a la perfección.",
+        img: "https://wildfork.mx/cdn/shop/articles/como-preparar-asado-de-tira.png?v=1602108325",
+        price: 350,
+      },
+      {
+        id: 2,
+        nombre: "Empanadas Criollas",
+        category: "carnes",
+        description: "Empanadas rellenas de carne picada a cuchillo, papa y huevo.",
+        img: "https://mui.kitchen/__export/1684898520273/sites/muikitchen/img/2023/05/23/empanadas1.jpg_1339198971.jpg",
+        price: 80,
+      },
+      {
+        id: 3,
+        nombre: "Milanesa a la Napolitana",
+        category: "carnes",
+        description: "Milanesa de carne, cubierta con salsa de tomate, jamón y queso.",
+        img: "https://truffle-assets.tastemadecontent.net/1t1bxm43v4e3_3LpsfSeVVeAaaUECEiCwEM_milanesas-a-la-napolitana_landscapeThumbnail_es.jpeg",
+        price: 250,
+      },
+      {
+        id: 4,
+        nombre: "Matambre a la Pizza",
+        category: "carnes",
+        description: "Matambre con salsa de tomate, queso y hierbas.",
+        img: "https://www.clarin.com/img/2022/11/25/tR-l3EmRl_1200x630__1.jpg",
+        price: 300,
+      },
+      {
+        id: 5,
+        nombre: "Pastel de Papas",
+        category: "carnes",
+        description: "Pastel de carne con capa de puré de papas dorado al horno.",
+        img: "https://i.ytimg.com/vi/9kUK_oav5dI/maxresdefault.jpg",
+        price: 180,
+      },
+      {
+        id: 6,
+        nombre: "Guiso de Lentejas",
+        category: "otros",
+        description: "Guiso de lentejas realizado en olla de barro.",
+        img: "https://i.pinimg.com/736x/8e/44/61/8e446130e89c82933994aaa2672a4cc5.jpg",
+        price: 120,
+      },
+      {
+        id: 11,
+        nombre: "Parrillada para Dos",
+        category: "carnes",
+        description: "Selección de cortes de carne asada para dos personas.",
+        img: "https://airescriollos.com.ar/wp-content/uploads/2023/09/parrillada-para-dos-personas-aires-criollos-parrilla.jpg",
+        price: 600,
+      },
+      {
+        id: 13,
+        nombre: "Ravioles de Ricota y Espinacas",
+        category: "otros",
+        description: "Ravioles rellenos de ricota y espinacas con salsa de tomate y albahaca.",
+        img: "https://images.unsplash.com/photo-1691689115767-1532d12c119f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        price: 220,
+      },
+      {
+        id: 15,
+        nombre: "Cazuela de Mariscos",
+        category: "otros",
+        description: "Cazuela abundante de mariscos en salsa de tomate y vino blanco.",
+        img: "https://comidasmexicanas.net/wp-content/uploads/2023/09/Receta-de-Cazuela-de-Mariscos.jpg",
+        price: 480,
+      },
+]

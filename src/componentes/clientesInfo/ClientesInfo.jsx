@@ -3,7 +3,7 @@ import './clientesInfo.css'
 
 
 
-export const ClientesInfo = () => {
+ const ClientesInfo = () => {
 
     const [nombre, setNombre] = useState('');
     const [mesa, setMesa] = useState('');
@@ -18,9 +18,10 @@ export const ClientesInfo = () => {
             <input type="text" id="nombre" />
             <label className="bg-amber-100 bordeEstilo">Mesa del Cliente:</label>
             <input type="text" id="mesa" />
-            <button className="llamarMozo bg-amber-100 " onClick={nuevoPedido}>Llamar Mozo</button>
+            <button className="llamarMozo bg-amber-250 " onClick={nuevoPedido}>Llamar Mozo</button>
         </div>
 
     )
 }
 
+export default ClientesInfo

@@ -1,5 +1,5 @@
-import './navbar.css'
-
+import './Navbar.css'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
@@ -9,10 +9,10 @@ const Navbar = () => {
                 <nav className="navbar p-5 m-5 flex items-center">
                     <div className="flex items-center">
                         <img className="carrito" src="/carrito.svg" alt="" />
-                        <a className="text-orange-800" href="#">Platos Principales</a>
-                        <a className="text-orange-800" href="#">Entradas</a>
-                        <a className="text-orange-800" href="#">Bebidas y postres</a>
-                        <a className="text-orange-800" href="#">Menú Infantil</a>
+                        {/* <link to={"/"} className="text-orange-800" >Platos Principales</link>  */}    { /* aca van los enlaces de los componentes a reenderizar */}
+                       {/*  <link to={"/"}className="text-orange-800" >Entradas</link>   */}                        {/* en to va la ruta hacia ese componente que quiero direccionar */}
+                        {/* <link className="text-orange-800" >Bebidas y postres</link> */}
+                       {/*  <link className="text-orange-800" >Menú Infantil</link> */}
                     </div>
                 </nav>
             </div>

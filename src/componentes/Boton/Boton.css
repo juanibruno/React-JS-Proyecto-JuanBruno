@@ -1,0 +1,39 @@
+
+/* 
+.boton{
+    padding: 3px;
+    margin: 5;
+    background-color: rgb(98, 0, 255);
+    margin: 10px;
+    width: 100px;
+    height: 5vh;
+} */
+
+/* Estilos para el contenedor del botón */
+div {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Estilos para el botón */
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #af844c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Estilos para el botón al pasar el ratón por encima */
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Estilos para la línea divisoria */
+  hr {
+    margin-top: 20px;
+  }
+  

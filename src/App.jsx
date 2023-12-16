@@ -1,20 +1,23 @@
-import { useState } from 'react'
+
 import './App.css'
-import Navbar from './componentes/Navbar/Navbar'
-/* import MainContenido from './componentes/MainContenido/mainContenido' */
-import ListaItems from './componentes/ListaItems/ListaItems'
-import { ClientesInfo } from './componentes/clientesInfo/ClientesInfo'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Navbar from './componentes/Navbar/Navbar';
+import ListaItemsConteiner  from './componentes/ListaItemsConteiner/ListaItemsConteiner'
+
+
 
 
 function App() {
-  
-  return (
-    <>
-    <Navbar/>
-    <ListaItems/>
-    <ClientesInfo/>
-    </>
-  ) 
-}
 
+    return (
+    <>
+
+      <Navbar />
+     <ListaItemsConteiner />
+
+
+ 
+      </>
+  )
+}
 export default App

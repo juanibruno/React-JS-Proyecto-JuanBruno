@@ -1,4 +1,4 @@
-import './MainContenido.css'
+import './mainContenido.css'
 
 const MainContenido = () => {
 
