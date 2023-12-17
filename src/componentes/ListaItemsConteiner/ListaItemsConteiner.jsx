@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react"
 import { pedirMenu } from "../../utilidades/utils";
 import Listaitems from "../ListaItem/ListaItems";
+import "./ListaItemsConteiner.css"
 
 const ListaItemsConteiner = () => {
 
@@ -22,7 +23,7 @@ const ListaItemsConteiner = () => {
         <>
             {
                 loading
-                    ? <h2>cargando...</h2>
+                    ? <h2 className="titulo flex flex-grap justify-center gap-6 items-center font-semibold text-2xl my-4">Pronto verás todo lo que tenemos disponible para vos...</h2>
                     : <Listaitems productos={productos} />
             }
         </>

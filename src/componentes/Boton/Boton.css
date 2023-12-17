@@ -1,25 +1,14 @@
 
-/* 
-.boton{
-    padding: 3px;
-    margin: 5;
-    background-color: rgb(98, 0, 255);
-    margin: 10px;
-    width: 100px;
-    height: 5vh;
-} */
 
-/* Estilos para el contenedor del botón */
 div {
     text-align: center;
     margin-top: 20px;
   }
   
-  /* Estilos para el botón */
-  button {
+  .boton {
     padding: 10px 20px;
-    font-size: 16px;
-    background-color: #af844c;
+    font-size: 12px;
+    background-color: #e70d20;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -27,13 +16,12 @@ div {
     transition: background-color 0.3s;
   }
   
-  /* Estilos para el botón al pasar el ratón por encima */
-  button:hover {
-    background-color: #45a049;
+   button:hover {
+    background-color: #7f1d1d;
   }
   
-  /* Estilos para la línea divisoria */
-  hr {
+   hr {
+    border-color: #7f1d1d;
     margin-top: 20px;
   }
   
