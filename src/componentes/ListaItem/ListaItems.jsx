@@ -13,7 +13,9 @@ const Listaitems = ({ productos }) => {
                 <img src={item.img} alt={item.nombre} className="cart-img" />
                 <div className="cart-info">
                   <h3 className="text-2xl font-semibold">{item.producto}</h3>
+                  <p className="nombreProducto">{item.nombre}</p>
                   <hr />
+                 
                   <p>{item.description}</p>
                   <p>Precio: ${item.price}</p>
                 </div>

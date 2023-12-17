@@ -52,7 +52,7 @@ export const OpcionesMenu = [
       },
       {
         id: 11,
-        nombre: "Parrillada para Dos",
+        nombre: "Parrilladada para Dos",
         category: "carnes",
         description: "Selección de cortes de carne asada para dos personas.",
         img: "https://airescriollos.com.ar/wp-content/uploads/2023/09/parrillada-para-dos-personas-aires-criollos-parrilla.jpg",

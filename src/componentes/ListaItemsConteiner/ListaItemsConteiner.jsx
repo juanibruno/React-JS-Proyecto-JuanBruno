@@ -23,7 +23,7 @@ const ListaItemsConteiner = () => {
         <>
             {
                 loading
-                    ? <h2 className="titulo flex flex-grap justify-center gap-6 items-center font-semibold text-2xl my-4">Pronto verás todo lo que tenemos disponible para vos...</h2>
+                    ? <h2 className="titulo flex flex-grap justify-center gap-6 items-center font-semibold text-4xl my-4">Pronto verás todo lo que tenemos disponible para vos...</h2>
                     : <Listaitems productos={productos} />
             }
         </>
