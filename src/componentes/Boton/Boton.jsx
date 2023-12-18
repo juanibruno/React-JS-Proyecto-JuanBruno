@@ -14,5 +14,5 @@ export default Boton;
 
 // esto es lo que va pegado en App si quiero utilizarlo
 /*       <Boton onClick={()=>console.log("boton cliekeado")}className='bg-red-600'>
-        SOLO TEXTO
+        TEXTO
       </Boton> */

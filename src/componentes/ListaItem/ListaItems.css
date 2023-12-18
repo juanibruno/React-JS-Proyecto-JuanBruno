@@ -1,7 +1,7 @@
 .container {
     margin: auto;
     margin-top: 4rem;
-    width: 80%; /* Ajusta según tus necesidades */
+    width: 80%; 
   }
   
   .text-4xl {
@@ -16,7 +16,7 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     margin: 0.5rem;
-    width: 30%; 
+    width: 20%; 
     background-color: #FFECB3;
   }
   

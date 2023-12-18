@@ -1,7 +1,9 @@
-
 .ordenNueva {
-margin: 10px;
-box-sizing: border-box;
-border-color: black;
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 25px;
+    margin: 10px;
+    font-size: 25px;
+    color: rgb(158, 21, 12);
+    box-sizing: border-box;
+    border-color: rgb(124, 9, 9);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

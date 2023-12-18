@@ -19,8 +19,9 @@ const Listaitems = ({ productos }) => {
                   <p>{item.description}</p>
                   <p>Precio: ${item.price}</p>
                 </div>
-                <Boton onClick={()=>console.log("boton cliekeado")}className='bg-red-600'>Pedir</Boton>
-              </article>
+                <Boton onClick={()=>console.log("boton cliekeado para ver detalle")}className='bg-red-600'>Ver detalle</Boton>
+                <Boton onClick={()=>console.log("boton cliekeado para pedir")}className='bg-red-600'>Pedir</Boton>
+                </article>
             ))}
           </div>
         </section>

@@ -8,11 +8,10 @@ const Navbar = () => {
                 <div className="logo-container"></div>
                 <nav className="navbar p-5 m-5 flex items-center">
                     <div className="flex items-center">
-                        <img className="carrito" src="/carrito.svg" alt="" />
-                        {/* <link to={"/"} className="text-orange-800" >Platos Principales</link>  */}    { /* aca van los enlaces de los componentes a reenderizar */}
-                       {/*  <link to={"/"}className="text-orange-800" >Entradas</link>   */}                        {/* en to va la ruta hacia ese componente que quiero direccionar */}
-                        {/* <link className="text-orange-800" >Bebidas y postres</link> */}
-                       {/*  <link className="text-orange-800" >Menú Infantil</link> */}
+                        <img className="carrito" src="/carrito.svg" alt="carrito" />
+                        <Link to={"/platos-postres"}>Platos y Postres</Link>
+                        <Link to={"/llamarMozo"}>Llamar al Mozo</Link>
+                        <Link to={"*"}></Link>
                     </div>
                 </nav>
             </div>
