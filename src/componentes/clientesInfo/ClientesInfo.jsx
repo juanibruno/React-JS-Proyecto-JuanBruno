@@ -18,7 +18,7 @@ import './clientesInfo.css'
             <input type="text" id="nombre" className='py-2 m-3'/>
             <label className="bg-amber-100 bordeEstilo py-2 m-3">Tu nombre: </label>
             <input type="text" id="mesa" className='py-2 m-3' />
-            <button className="llamarMozo bg-amber-250 pl-4" onClick={nuevoPedido}>Llamar</button>
+            <button className="llamarMozo bg-amber-250 pl-4" onClick={nuevoPedido}>Llamar Mozo</button>
         </div>
 
     )

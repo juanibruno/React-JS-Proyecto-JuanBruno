@@ -5,7 +5,7 @@ const Listaitems = ({ productos }) => {
 
     return (
         <section className="container m-auto mt-4">
-          <h2 className="titulo text-4xl font-semibold text-center">Platos y postres</h2>
+          <h2 className="titulo text-4xl font-semibold text-center">Opciones</h2>
           <hr />
           <div className="flex flex-wrap justify-around gap-6 items-center">
             {productos.map((item) => (

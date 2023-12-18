@@ -27,7 +27,7 @@ const ListaItemsConteiner = () => {
                 
             })
             .finally(() => setLoading( false ))
-    }, [])
+    }, [categoryId])
 
     return (
         <>

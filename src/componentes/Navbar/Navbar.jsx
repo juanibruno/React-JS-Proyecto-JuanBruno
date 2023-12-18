@@ -9,7 +9,10 @@ const Navbar = () => {
                 <nav className="navbar p-5 m-5 flex items-center">
                     <div className="flex items-center">
                         <img className="carrito" src="/carrito.svg" alt="carrito" />
-                        <Link to={"/platos-postres"}>Platos y Postres</Link>
+                        <Link to={"/"}>Inicio</Link>
+                        <Link to={"/platos-postres/carnes"}>Carnes</Link>
+                        <Link to={"/platos-postres/otros"}>Otros</Link>
+                        <Link to={"/platos-postres/infantil"}>Menu Infantil</Link>
                         <Link to={"/llamarMozo"}>Llamar al Mozo</Link>
                         <Link to={"*"}></Link>
                     </div>
