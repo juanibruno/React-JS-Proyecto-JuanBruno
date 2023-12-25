@@ -1,9 +1,11 @@
 import "./ListaItems.css"
 import Boton from "../Boton/Boton";
 import AgregarCarrito from "../../ejemplos/AgregarCarrito";
+import OptionSelector from "../../OptionSelector/OptionSelector";
 import { useState } from "react";
 
 const Listaitems = ({ productos }) => {
+ 
 
 const handleAgregar = (id, cantidad) => {
     // Aquí puedes realizar las acciones que necesitas con el id y cantidad
@@ -27,6 +29,9 @@ const handleAgregar = (id, cantidad) => {
                  
                   <p>{item.description}</p>
                   <p>Precio: ${item.price}</p>
+                </div>
+                <div>
+                  <OptionSelector/>
                 </div>
                 <AgregarCarrito id={item.id} stock={item.stock} />
 
