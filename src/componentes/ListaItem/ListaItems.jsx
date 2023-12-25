@@ -5,7 +5,10 @@ import { useState } from "react";
 
 const Listaitems = ({ productos }) => {
 
-
+const handleAgregar = (id, cantidad) => {
+    // Aquí puedes realizar las acciones que necesitas con el id y cantidad
+    console.log(`Agregando al carrito - ID: {item.id}, Cantidad: {item.cantidad}`);
+  };
 
   
 
@@ -28,7 +31,7 @@ const Listaitems = ({ productos }) => {
                 <AgregarCarrito id={item.id} stock={item.stock} />
 
                 <Boton onClick={()=>console.log("boton cliekeado para ver detalle")}className='bg-red-600'>Ver detalle</Boton>
-                <Boton onClick={()=>console.log("boton cliekeado para pedir")}className='bg-red-600'>Pedir</Boton>
+                {<Boton onClick={handleAgregar}className='bg-red-600'>Pedir</Boton>}
                 </article>
             ))}
           </div>
