@@ -1,7 +1,13 @@
 import "./ListaItems.css"
 import Boton from "../Boton/Boton";
+import AgregarCarrito from "../../ejemplos/AgregarCarrito";
+import { useState } from "react";
 
 const Listaitems = ({ productos }) => {
+
+
+
+  
 
     return (
         <section className="container m-auto mt-4">
@@ -19,6 +25,8 @@ const Listaitems = ({ productos }) => {
                   <p>{item.description}</p>
                   <p>Precio: ${item.price}</p>
                 </div>
+                <AgregarCarrito id={item.id} stock={item.stock} />
+
                 <Boton onClick={()=>console.log("boton cliekeado para ver detalle")}className='bg-red-600'>Ver detalle</Boton>
                 <Boton onClick={()=>console.log("boton cliekeado para pedir")}className='bg-red-600'>Pedir</Boton>
                 </article>
