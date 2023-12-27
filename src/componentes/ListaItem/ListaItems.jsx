@@ -3,17 +3,20 @@ import Boton from "../Boton/Boton";
 import AgregarCarrito from "../../ejemplos/AgregarCarrito";
 import OptionSelector from "../../OptionSelector/OptionSelector";
 import { useContext, useState } from "react";
-import { MyContext } from "../context/Mycontext";
+import { CartContext } from "../context/CartContext";
+
 
 const Listaitems = ({ productos }) => {
+  
 
- /*  const contexto = useContext(MyContext)
-  console.log(contexto); */
+ const { cart, setCart} = useContext(CartContext)
 
+ console.log(cart);
+ 
   const handleAgregar = (itemToCart) => {
-    // Aquí puedes realizar las acciones que necesitas con el id y cantidad
-    /*  console.log(`Agregando al carrito - ID: {item.id}, Cantidad: {item.cantidad}`); */
+  
     console.log(itemToCart);
+    
   };
 
 

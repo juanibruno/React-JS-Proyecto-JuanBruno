@@ -4,19 +4,21 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './componentes/Navbar/Navbar';
 import ListaItemsConteiner from './componentes/ListaItemsConteiner/ListaItemsConteiner'
 import ClientesInfo from './componentes/ClientesInfo/ClientesInfo';
-import { MyContext } from './componentes/context/Mycontext';
-
-
-
-
+import { CartContext } from './componentes/context/CartContext';
+import { useState } from 'react';
 
 function App() {
 
-  const profe = "esto se pica"
-  const marilin = "voy por vossa"
+  const [cart, setCart] = useState([])
+   
+
   return (
 
-    <MyContext.Provider value={marilin}>
+    <CartContext.Provider value={{
+      cart,
+      setCart
+    }}>
+
       <BrowserRouter>
 
         <Navbar />
@@ -33,8 +35,10 @@ function App() {
 
       </BrowserRouter>
 
+    </CartContext.Provider>
 
-    </MyContext.Provider>
+
+
 
 
   )

@@ -1,9 +1,12 @@
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
 import Boton from "../componentes/Boton/Boton"
+import { CartContext } from "../componentes/context/CartContext"
 
 import { OpcionesMenu } from "../Mock/data"
 
 const AgregarCarrito = ({ id, stock, onAgregar, item }) => {
+
+    const {cart, setCart} = useContext(CartContext)
     const [cantidad, setCantidad] = useState(1)
 
     const handleSumar = () => {
@@ -22,7 +25,10 @@ const AgregarCarrito = ({ id, stock, onAgregar, item }) => {
             item
 
         }
-        onAgregar(itemToCart);
+        const newCart = cart.slice()
+        newCart.push (itemToCart)
+
+        setCart(newCart)
 
     }
 
