@@ -4,22 +4,22 @@ import AgregarCarrito from "../../ejemplos/AgregarCarrito";
 import OptionSelector from "../../OptionSelector/OptionSelector";
 import { useContext, useState } from "react";
 import { CartContext } from "../context/CartContext";
+import { Link } from "react-router-dom";
 
 
 const Listaitems = ({ productos }) => {
-  
 
- const { cart, setCart} = useContext(CartContext)
 
- console.log(cart);
- 
+
+  const { cart, setCart, isInCart } = useContext(CartContext)
+
+  console.log("ListaItems ", cart)
+
   const handleAgregar = (itemToCart) => {
-  
+
     console.log(itemToCart);
-    
+
   };
-
-
 
   return (
     <section className="container m-auto mt-4">
@@ -37,14 +37,22 @@ const Listaitems = ({ productos }) => {
               <p>{item.description}</p>
               <p>Precio: ${item.price}</p>
             </div>
-            
-            <AgregarCarrito id={item.id}stock={item.stock} onAgregar={handleAgregar} item={item} />
-            <div>
-              <OptionSelector />
-            </div>
+            {
+              isInCart(productos.id)
+                ? <Boton className='bg-red-600'><Link to="./comanda">Terminar la Orden</Link></Boton>
+                : <>
+                  <AgregarCarrito id={item.id} stock={item.stock} onAgregar={handleAgregar} item={item} />
+                  <div>
+                    <OptionSelector />
+                  </div>
+                </>
+            }
 
-            <Boton onClick={() => console.log("boton cliekeado para ver detalle")} className='bg-red-600'>Ver detalle</Boton>
-            {/* <Boton onClick={handleAgregar} className='bg-red-600'>Pedir</Boton> */}
+
+
+
+
+
           </article>
         ))}
       </div>

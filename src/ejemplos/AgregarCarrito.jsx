@@ -6,8 +6,12 @@ import { OpcionesMenu } from "../Mock/data"
 
 const AgregarCarrito = ({ id, stock, onAgregar, item }) => {
 
-    const {cart, setCart} = useContext(CartContext)
+    const {cart, setCart, isInCart} = useContext(CartContext)
     const [cantidad, setCantidad] = useState(1)
+    
+    
+
+    console.log(isInCart(item.id));
 
     const handleSumar = () => {
         cantidad < stock && setCantidad(cantidad + 1)
@@ -16,6 +20,8 @@ const AgregarCarrito = ({ id, stock, onAgregar, item }) => {
     const handleRestar = () => {
         cantidad > 1 && setCantidad(cantidad - 1)
     }
+
+ 
 
     const handleAgregar = () => {
 
@@ -39,7 +45,7 @@ const AgregarCarrito = ({ id, stock, onAgregar, item }) => {
             <Boton onClick={handleRestar}>-</Boton>
             <span>{cantidad}</span>
             <Boton onClick={handleSumar}>+</Boton>
-            <Boton onClick={handleAgregar} className="bg-red-600">Pedir</Boton>
+            <Boton onClick={handleAgregar} className="bg-red-600">Agregar</Boton>
         </div>
 
     )
