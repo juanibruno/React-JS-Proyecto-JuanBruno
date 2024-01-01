@@ -28,6 +28,7 @@ const AgregarCarrito = ({ id, stock, item }) => {
             item
 
         }
+        
         if (isInCart(item.id)) {
             // Actualiza la cantidad del item existente
             const updatedCart = cart.map(cartItem =>
