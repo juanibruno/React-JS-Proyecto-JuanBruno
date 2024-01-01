@@ -1,8 +1,9 @@
 import { useContext } from 'react';
 import { CartContext } from "../context/CartContext";
 
+
 const VistaCarrito = () => {
-    const { cart } = useContext(CartContext);
+    const { cart } = useContext(CartContext)
 
     return (
         <section className="container m-auto mt-8">

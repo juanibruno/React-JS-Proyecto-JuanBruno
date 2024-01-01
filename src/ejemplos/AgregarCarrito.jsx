@@ -2,14 +2,13 @@ import React, { useContext, useState } from "react"
 import Boton from "../componentes/Boton/Boton"
 import { CartContext } from "../componentes/context/CartContext"
 
-import { OpcionesMenu } from "../Mock/data"
+/* import { OpcionesMenu } from "../Mock/data" */
 
-const AgregarCarrito = ({ id, stock, onAgregar, item }) => {
+const AgregarCarrito = ({ id, stock, item }) => {
 
-    const {cart, setCart, isInCart} = useContext(CartContext)
+    const { cart, setCart, isInCart } = useContext(CartContext)
     const [cantidad, setCantidad] = useState(1)
-    
-    
+
 
     console.log(isInCart(item.id));
 
@@ -21,22 +20,26 @@ const AgregarCarrito = ({ id, stock, onAgregar, item }) => {
         cantidad > 1 && setCantidad(cantidad - 1)
     }
 
- 
-
     const handleAgregar = () => {
 
         const itemToCart = {
-            ...id,
+            id,
             cantidad,
             item
 
         }
-        const newCart = cart.slice()
-        newCart.push (itemToCart)
-
-        setCart(newCart)
-
-    }
+        if (isInCart(item.id)) {
+            // Actualiza la cantidad del item existente
+            const updatedCart = cart.map(cartItem =>
+                cartItem.id === item.id ? { ...cartItem, cantidad: cartItem.cantidad + cantidad } : cartItem
+            );
+            setCart(updatedCart);
+        } else {
+            // Agrega el item al carrito
+            const newCart = [...cart, itemToCart];
+            setCart(newCart);
+        }
+    };
 
 
     return (
