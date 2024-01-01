@@ -38,7 +38,7 @@ const Listaitems = ({ productos }) => {
               <p>Precio: ${item.price}</p>
             </div>
             {
-              isInCart(productos.id)
+              isInCart(item.id)
                 ? <Boton className='bg-red-600'><Link to="./comanda">Terminar la Orden</Link></Boton>
                 : <>
                   <AgregarCarrito id={item.id} stock={item.stock} onAgregar={handleAgregar} item={item} />

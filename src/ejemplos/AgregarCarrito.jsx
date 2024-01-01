@@ -23,7 +23,7 @@ const AgregarCarrito = ({ id, stock, item }) => {
     const handleAgregar = () => {
 
         const itemToCart = {
-            id,
+            id: item.id,
             cantidad,
             item
 
@@ -31,14 +31,15 @@ const AgregarCarrito = ({ id, stock, item }) => {
         if (isInCart(item.id)) {
             // Actualiza la cantidad del item existente
             const updatedCart = cart.map(cartItem =>
-                cartItem.id === item.id ? { ...cartItem, cantidad: cartItem.cantidad + cantidad } : cartItem
+                cartItem.id === item.id
+                 ? { ...cartItem, cantidad: cartItem.cantidad + cantidad } 
+                 : cartItem
             );
             setCart(updatedCart);
         } else {
             // Agrega el item al carrito
-            const newCart = [...cart, itemToCart];
-            setCart(newCart);
-        }
+            setCart([...cart, itemToCart]);
+          }
     };
 
 

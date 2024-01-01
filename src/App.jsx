@@ -13,9 +13,8 @@ function App() {
   const [cart, setCart] = useState([])
 
   const addToCart = (item) => {
-    setCart([...cart, item])
-
-  }
+    setCart([...cart, { id: item.id, cantidad: 1, item }]);
+  };
   const isInCart = (id) => {
     return cart.some(item => item.id === id)
   }
