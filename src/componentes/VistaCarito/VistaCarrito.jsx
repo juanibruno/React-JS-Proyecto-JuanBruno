@@ -1,10 +1,11 @@
 import { useContext } from 'react';
 import { CartContext } from "../context/CartContext";
-import Boton from '../Boton/Boton';
+
 
 
 const VistaCarrito = () => {
     const { cart } = useContext(CartContext)
+
 
     if (cart.length === 0) {
         return (
@@ -24,6 +25,7 @@ const VistaCarrito = () => {
             <ul>
                     {
                         cart.map((item) => (
+                            
                             <li key={item.id} style={{ border: '1px solid black' }}>
                                 <img src={item.img} alt="Carrito" className='w-32' />
                                 <div>

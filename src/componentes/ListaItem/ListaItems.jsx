@@ -13,11 +13,11 @@ const Listaitems = ({ productos }) => {
 
   const { cart, setCart, isInCart } = useContext(CartContext)
 
-  console.log("ListaItems ", cart)
+ /*  console.log("ListaItems ", cart) */
 
   const handleAgregar = (itemToCart) => {
 
-    console.log(itemToCart);
+   /*  console.log(itemToCart); */
 
   };
 

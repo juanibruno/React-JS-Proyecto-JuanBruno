@@ -1,44 +1,54 @@
-
-import { useState, useEffect } from "react"
-import { pedirMenu } from "../../utilidades/utils";
+import { useState, useEffect } from "react";
 import Listaitems from "../ListaItem/ListaItems";
-import "./ListaItemsConteiner.css"
+import "./ListaItemsConteiner.css";
 import { useParams } from "react-router-dom";
-
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { dataBase } from "../../firebase/config";
+import { doc } from "firebase/firestore";
 
 const ListaItemsConteiner = () => {
+    const [productos, setProductos] = useState([]);
+    const [loading, setLoading] = useState(true);
 
-    const [productos, setProductos] = useState([])
-    const [loading, setLoading] = useState(true)
-
-    const {categoryId} = useParams()
-    console.log(categoryId);    
+    const { categoryId } = useParams();
+    console.log(categoryId);
 
     useEffect(() => {
-        setLoading(true)
+        setLoading(true);
 
-        pedirMenu()
-            .then((data) => {
+        // 1. Armado de referencia (sync)
+        const productosRef = collection(dataBase, 'Productos');
+        const q = categoryId
+            ? query(productosRef, where('category', '==', categoryId))
+            : productosRef
 
-                const items = categoryId
-                                ? data.filter(prod => prod.category === categoryId)
-                                : data
-
-                setProductos(items)
-                
+        // Verificación de categoryId antes de crear la consulta
+        getDocs(q)
+            .then((querySnapshot) => {
+                const docs = querySnapshot.docs.map((doc) => ({
+                    ...doc.data(),
+                    id: doc.id,
+                }
+                ))
+                console.log(docs);
+                setProductos(docs);
             })
-            .finally(() => setLoading( false ))
-    }, [categoryId])
+            .finally(() => setLoading(false));
 
-    return (
-        <>
-            {
-                loading
-                    ? <h2 className="titulo flex flex-grap justify-center gap-6 items-center font-semibold text-4xl my-4">Pronto verás todo lo que tenemos disponible para vos...</h2>
-                    : <Listaitems productos={productos} />
-            }
-        </>
-    )
+                // 2. Llamado a esa referencia (async)
+            }, [categoryId]);
 
-}
-export default ListaItemsConteiner
+return (
+    <>
+        {loading ? (
+            <h2 className="titulo flex flex-grap justify-center gap-6 items-center font-semibold text-4xl my-4">
+                Pronto verás todo lo que tenemos disponible para vos...
+            </h2>
+        ) : (
+            <Listaitems productos={productos} />
+        )}
+    </>
+);
+};
+
+export default ListaItemsConteiner;
