@@ -7,6 +7,8 @@ import ClientesInfo from './componentes/ClientesInfo/ClientesInfo';
 import { CartContext } from './componentes/context/CartContext';
 import { useState } from 'react';
 import VistaCarrito from './componentes/VistaCarito/VistaCarrito';
+import Checkout from './componentes/Checkout/Checkout';
+
 
 function App() {
 
@@ -41,6 +43,7 @@ function App() {
         <Routes>
           <Route path='/' element={<ListaItemsConteiner />} />
           <Route path='/platos-postres' element={<ListaItemsConteiner />} />
+          <Route path='/checkout' element={<Checkout/>}/>
           <Route path='/carrito' element={<VistaCarrito/>}/>
           <Route path='/platos-postres/:categoryId' element={<ListaItemsConteiner />} />
           <Route path='/llamarMozo' element={<ClientesInfo />} />

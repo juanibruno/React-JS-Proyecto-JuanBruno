@@ -1,11 +1,13 @@
 import { useContext } from 'react';
 import { CartContext } from "../context/CartContext";
+import Boton from '../Boton/Boton';
+import { Link } from 'react-router-dom';
 
 
 
 const VistaCarrito = () => {
     const { cart } = useContext(CartContext)
-
+    
 
     if (cart.length === 0) {
         return (
@@ -37,6 +39,7 @@ const VistaCarrito = () => {
                         ))
                     }
                 </ul>
+                <Boton><Link to="/checkout">Mandar el pedido al Mozo</Link></Boton>
             
 
         </section>
