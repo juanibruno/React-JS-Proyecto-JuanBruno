@@ -1,7 +1,7 @@
 import { useContext, useState } from "react"
 import "./Checkout.css"
 import { CartContext } from "../context/CartContext";
-import { collection, addDoc, doc, getDoc, updateDoc } from "firebase/firestore";
+import { collection, addDoc, doc, getDoc, updateDoc, setDoc } from "firebase/firestore";
 import { dataBase } from "../../firebase/config";
 
 
@@ -16,18 +16,19 @@ const Checkout = () => {
     });
 
     const [ordenId, setOrdenId] = useState(null)
+
     const handleInputChange = (e) => {
 
         setValues({
             ...values,
-            [e.target.name]: e.target.value
+            [e.target.name]: e.target.value,
         })
 
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(values);
+        /*   console.log(values); */
 
         const orden = {
             cliente: values,
@@ -36,8 +37,13 @@ const Checkout = () => {
 
         }
 
-        const ordenRef = collection(dataBase, "Ordenes")
-        addDoc(ordenRef, orden).then((doc) => setOrdenId(doc.id))
+        const ordenRef = collection(dataBase, "Ordenes");
+
+        addDoc(ordenRef, orden).then((doc) => {
+            setOrdenId(doc.id)
+            clearCart()
+          
+        })
 
     };
     if (ordenId) {
@@ -46,6 +52,7 @@ const Checkout = () => {
                 <h2 className="text-4xl font-semibold text-slate-100 py-4">Tu pedido se encuentra en Preparacion</h2>
                 <hr />
                 <p className="text-1xl font-semibold text-slate-100 py-2">Tu numero de pedido es: {ordenId}</p>
+
             </div>
         )
     }

@@ -35,16 +35,14 @@ const Listaitems = ({ productos }) => {
               <hr />
 
               <p>{item.description}</p>
-              <p>Precio: ${item.price}</p>
+              <p>Precio por Unidad: ${item.price}</p>
             </div>
             {
               isInCart(item.id)
-                ? <Boton className='bg-red-600'><Link to="./comanda">Terminar la Orden</Link></Boton>
+                ? <Boton className='bg-red-600'><Link to="./carrito">Ir al Carrito</Link></Boton>
                 : <>
                   <AgregarCarrito id={item.id} stock={item.stock} onAgregar={handleAgregar} item={item} />
-                  <div>
-                    <OptionSelector />
-                  </div>
+                 
                 </>
             }
 

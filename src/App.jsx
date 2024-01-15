@@ -20,9 +20,13 @@ function App() {
   const isInCart = (id) => {
     return cart.some(item => item.id === id)
   }
-
+  
   const itemEnCarrito = () => {
     return cart.reduce((acc, item) => acc + item.cantidad , 0)
+}
+
+const clearCart = () => {
+  setCart([])
 }
 
 
@@ -34,6 +38,8 @@ function App() {
       isInCart,
       addToCart,
       itemEnCarrito,
+      clearCart,
+
     }}>
 
       <BrowserRouter>

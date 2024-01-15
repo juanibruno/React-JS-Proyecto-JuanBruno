@@ -6,7 +6,11 @@ import { Link } from 'react-router-dom';
 
 
 const VistaCarrito = () => {
-    const { cart } = useContext(CartContext)
+    const { cart, setCart } = useContext(CartContext)
+
+    const handleLimpiar = () => {
+        setCart([])
+    }
     
 
     if (cart.length === 0) {
@@ -40,6 +44,7 @@ const VistaCarrito = () => {
                     }
                 </ul>
                 <Boton><Link to="/checkout">Mandar el pedido al Mozo</Link></Boton>
+                <Boton onClick={handleLimpiar}><Link to="/">Volver</Link></Boton>
             
 
         </section>
