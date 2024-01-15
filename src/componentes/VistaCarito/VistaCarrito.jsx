@@ -43,8 +43,11 @@ const VistaCarrito = () => {
                         ))
                     }
                 </ul>
-                <Boton><Link to="/checkout">Mandar el pedido al Mozo</Link></Boton>
-                <Boton onClick={handleLimpiar}><Link to="/">Volver</Link></Boton>
+                <div className="flex gap-2 justify-center items-center">
+                <Boton><Link to="/checkout">Enviar el pedido</Link></Boton>
+                <Boton onClick={handleLimpiar}><Link to="/">Volver a empezar</Link></Boton>
+                </div>
+                
             
 
         </section>

@@ -16,7 +16,7 @@ const Navbar = () => {
                         <Link to={"/platos-postres/infantil"}>Menu Infantil</Link>
                         <Link to={"/platos-postres/postres"}>Postres</Link>
                         <Link to={"/llamarMozo"}>Llamar al Mozo</Link>
-                        <Link to={"*"}></Link>
+                        <Link to={"/carrito"}></Link>
                         <Carrito/>
                     </div>
                 </nav>

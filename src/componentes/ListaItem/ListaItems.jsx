@@ -40,17 +40,9 @@ const Listaitems = ({ productos }) => {
             {
               isInCart(item.id)
                 ? <Boton className='bg-red-600'><Link to="./carrito">Ir al Carrito</Link></Boton>
-                : <>
-                  <AgregarCarrito id={item.id} stock={item.stock} onAgregar={handleAgregar} item={item} />
-                 
-                </>
+                : <AgregarCarrito id={item.id} stock={item.stock} onAgregar={handleAgregar} item={item} />
+                
             }
-
-
-
-
-
-
           </article>
         ))}
       </div>
