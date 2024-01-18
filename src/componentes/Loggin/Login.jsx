@@ -1,7 +1,11 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import './login.css'
+import { UserContext } from '../context/UserContext'
+
 
 const Login = () => {
+
+    const {acceso} = useContext(UserContext)
 
     const [values, setValues] = useState({
         email: '',
@@ -17,7 +21,7 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log("submit");
+        acceso(values)
     } 
     return (
         <div className="login-conteiner ">
