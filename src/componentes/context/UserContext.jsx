@@ -10,11 +10,12 @@ const UserProvider = ({ children }) => {
     const [user, setUser] = useState({
         email: null,
         logged: false,
-        uid: null,
+        uid: null
 
     })
 
-    /* console.log(user); */
+    console.log(user); 
+
     const acceso = (values) => {
 
         setUser({
