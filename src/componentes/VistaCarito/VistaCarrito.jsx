@@ -14,11 +14,13 @@ const VistaCarrito = () => {
     
 
     if (cart.length === 0) {
+
+        console.log(cart);
         return (
             <section>
                 <h2 className="titulo flex flex-grap justify-center gap-6 items-center font-semibold text-4xl my-4">Todavía no tenes productos seleccionados</h2>
                 <hr />
-                <a className='titulo text-white text-2xl' href="/">Volver</a>
+                <Link to={"/"} className="titulo flex flex-grap justify-center gap-6 items-center font-semibold text-4xl my-4" >Volver</Link>
             </section>
         )
     }

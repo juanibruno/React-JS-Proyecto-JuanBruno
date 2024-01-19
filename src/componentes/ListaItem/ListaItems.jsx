@@ -7,19 +7,22 @@ import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
 
 
+
 const Listaitems = ({ productos }) => {
 
 
 
   const { cart, setCart, isInCart } = useContext(CartContext)
 
- /*  console.log("ListaItems ", cart) */
+  /*  console.log("ListaItems ", cart) */
 
   const handleAgregar = (itemToCart) => {
 
-   /*  console.log(itemToCart); */
+    /*  console.log(itemToCart); */
 
   };
+
+  console.log(cart);
 
   return (
     <section className="container m-auto mt-4">
@@ -27,23 +30,25 @@ const Listaitems = ({ productos }) => {
       <hr />
       <div className="flex flex-wrap justify-around gap-6 items-center">
         {productos.map((item) => (
-          <article key={item.id} className="cart">
-            <img src={item.img} alt={item.nombre} className="cart-img" />
-            <div className="cart-info">
-              <h3 className="text-2xl font-semibold">{item.producto}</h3>
-              <p className="nombreProducto">{item.nombre}</p>
-              <hr />
+          
+            <article key={item.id} className="cart">
+              <img src={item.img} alt={item.nombre} className="cart-img" />
+              <div className="cart-info">
+                <h3 className="text-2xl font-semibold">{item.producto}</h3>
+                <p className="nombreProducto">{item.nombre}</p>
+                <hr />
 
-              <p>{item.description}</p>
-              <p>Precio por Unidad: ${item.price}</p>
-            </div>
-            {
-              isInCart(item.id)
-                ? <Boton className='bg-red-600'><Link to="./carrito">Ir al Carrito</Link></Boton>
-                : <AgregarCarrito id={item.id} stock={item.stock} onAgregar={handleAgregar} item={item} />
-                
-            }
-          </article>
+                <p>{item.description}</p>
+                <p>Precio por Unidad: ${item.price}</p>
+              </div>
+              {
+                isInCart(item.id)
+                  ? <Boton className='bg-red-600'><Link to="./carrito">Ir al Carrito</Link></Boton>
+                  : <AgregarCarrito id={item.id} stock={item.stock} onAgregar={handleAgregar} item={item} />
+
+              }
+            </article>
+          
         ))}
       </div>
     </section>

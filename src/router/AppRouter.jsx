@@ -31,10 +31,10 @@ const AppRouter = () => {
                     <Route path='*' element={<h3 className='text-4xl font-semibold py-20 text-slate-100'>Presiona <h2 className="text-red-600 py-2 font-semibold ">Inicio</h2> por favor!</h3>} />
                 </Routes>
             ) :
-                (<Routes>
-                    <Route path='/login' element={<Login />} />
-                </Routes>
+                (
+                <Login />
                 )}
+                
         </BrowserRouter>
     )
 }
